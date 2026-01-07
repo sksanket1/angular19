@@ -1,0 +1,46 @@
+<h1 *ngIf="show">Heading Tag</h1>
+
+<hr>
+<h1>*ngFor Directives in Angular</h1>
+<ul>
+  <li *ngFor="let x of students">
+    {{x}}
+  </li>
+</ul>
+
+<h2>Student Data</h2>
+<ul>
+  <li *ngFor="let stu of studentsData">
+    {{stu.name}}
+    {{stu.age}}
+    {{stu.email}}
+  </li>
+</ul>
+
+<div *ngIf="login;else elseBlock">
+  <a href="">Logout</a>
+</div>
+<ng-template #elseBlock>
+  <a href="">Login</a>
+</ng-template>
+
+<div *ngIf="block==0">
+  <h1>Heading 0</h1>
+</div>
+<div *ngIf="block==1">
+  <h1>Heading 1</h1>
+</div>
+<div *ngIf="block==2">
+  <h1>Heading 2</h1>
+</div>
+
+<button (click)="Update()">Update Block</button>
+<hr>
+<h1>ng Switch</h1>
+<button (click)="UpdateColor('green')">Green</button>
+<div [ngSwitch]="color">
+  <h2 *ngSwitchCase="'red'" style="background-color: red;">Red</h2>
+  <h2 *ngSwitchCase="'green'" style="background-color: green;">Green</h2>
+  <h2 *ngSwitchCase="'yellow'" style="background-color: yellow;">Yellow</h2>
+  <h2 *ngSwitchDefault>No Color Matched</h2>
+</div>

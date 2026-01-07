@@ -1,0 +1,10 @@
+<h1>Pass data to parent to child</h1>
+<app-user username="ss" city="dasda"></app-user>
+<app-user [username]="username" city="Pune"></app-user>
+
+<select #selectedUser (change)="onUserChange(selectedUser.value)">
+  <option value="ss">Ssssssss</option>
+  <option value="aaaabbb">aaaaa</option>
+  <option value="fffffff">ffffff</option>
+  <option value="qqqqqqq">qqqqqq</option>
+</select>

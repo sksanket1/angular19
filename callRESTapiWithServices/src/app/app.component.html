@@ -1,0 +1,15 @@
+<h1>API Call Service</h1>
+@for(product of productList;track product){
+<ul>
+  <li><b>Title:</b>{{product.title}}</li>
+  <li><b>Category:</b>{{product.category}}</li>
+  <li><b>Price:</b>{{product.price}}</li>
+  <li><b>Reviews:</b></li>
+  <ul>
+    @for (review of product.reviews; track $index) {
+    <li>{{ review.comment }} — <i>{{ review.reviewerName }}</i></li>
+    }
+  </ul>
+  <li><img src="{{product.thumbnail}}" alt=""></li>
+</ul>
+}

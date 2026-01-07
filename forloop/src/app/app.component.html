@@ -1,0 +1,22 @@
+<h1>For Loop</h1>
+
+@for(user of users;track user;let i=$index;let f=$first;let l=$last){
+  <!-- @if(f || l){
+  <h2 style="color: red;">Index:{{i+1}} Name: {{user}}</h2>
+  }
+  @else{
+  <h2 style="color: black;">Index:{{i+1}} Name: {{user}}</h2>
+  } -->
+  
+  @if($even){
+  <h2 style="color: red;">Index:{{i+1}} Name: {{user}}</h2>
+  }
+  @else{
+  <h2 style="color: black;">Index:{{i+1}} Name: {{user}}</h2>
+  }
+
+}
+
+@empty(){
+  <h1>No record found!</h1>
+}

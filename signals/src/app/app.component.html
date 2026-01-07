@@ -1,0 +1,23 @@
+<h1>Signal</h1>
+<h2>{{count()}}</h2>
+<h2>{{x}}</h2>
+<button (click)="count.set(100)">Increase Signal</button>
+<button (click)="x=200">Increase Property</button>
+
+<button (click)="updateValue()">Update Value</button>
+
+<!-- <button (click)="update('dec')">Decreement</button>
+<button (click)="update('inc')">Increement</button> -->
+
+<button (click)="count.set(count()-1)">Decreement</button>
+<button (click)="count.set(count()+1)">Increement</button>
+
+<hr>
+<h3>{{data()}}</h3>
+<button (click)="updateSignal()">Update</button>
+<h4>{{counted()}}</h4>
+
+<h1>Computed Signals</h1>
+<h2>{{c()}}</h2>
+<button (click)="showValue()">Show Value</button>
+<button (click)="updateX()">Update X</button>

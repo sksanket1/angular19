@@ -1,0 +1,21 @@
+<h1>Multiple Else if</h1>
+
+<button (click)="handle(1)">Red</button>
+<button (click)="handle(2)">Yellow</button>
+<button (click)="handle(3)">Green</button>
+<button (click)="handle(4)">Other</button>
+<input placeholder="Enter color number" (input)="colornum($event)">
+<br><br>
+@if(code==1){
+<div style="height: 100px;width: 100px;background-color: red;">
+</div>
+} @else if(code==2){
+<div style="height: 100px;width: 100px;background-color: yellow;">
+</div>
+} @else if(code==3){
+<div style="height: 100px;width: 100px;background-color: green;">
+</div>
+} @else{
+<div style="height: 100px;width: 100px;background-color: black;">
+</div>
+}

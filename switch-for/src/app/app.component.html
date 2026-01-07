@@ -1,0 +1,40 @@
+<h1>Switch case</h1>
+<button (click)="toggle('red')">Red</button>
+<button (click)="toggle('green')">Green</button>
+<button (click)="toggle('yellow')">Yellow</button>
+<button (click)="toggle('other')">Other</button>
+<input type="text" placeholder="Enter Color" (input)="changecolor($event)">
+
+@switch(color){
+@case('red'){
+<h1 style="background-color: red;">Red</h1>
+}
+
+@case('yellow'){
+<h1 style="background-color: yellow;">Yellow</h1>
+}
+
+@case('green'){
+<h1 style="background-color: green;">Green</h1>
+}
+
+@default{
+<h1 style="background-color: black; color:white">No Color Match</h1>
+}
+}
+
+<!-- <h2>{{users[3]}}</h2> -->
+
+<!-- @for(item of users;track users){
+<h2>{{item}}</h2>
+} -->
+
+@for(student of students;track student; let id=$index){
+<h2>
+  <span>{{id+1}} </span>
+  <span>Name:{{student.name}} </span>
+  <span>Age:{{student.age}} </span>
+  <span>Email:{{student.email}}</span>
+  <button (click)="getName(student.name)">Get Name</button>
+</h2>
+}

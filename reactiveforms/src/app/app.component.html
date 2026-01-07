@@ -1,0 +1,11 @@
+<h1>Basic of React</h1>
+<form action="" method="post">
+  <input type="text" placeholder="Enter Name" [formControl]="name">
+  <br>
+  <input type="text" placeholder="Enter Password" [formControl]="password">
+  <br>
+  <button type="button" (click)="displayValue()">Login</button>
+  <button type="button" (click)="setValue()">Set Values</button>
+  <h3>{{name.value}}</h3>
+  <h3>{{password.value}}</h3>
+</form>
